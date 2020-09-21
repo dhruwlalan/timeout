@@ -1,0 +1,11 @@
+
+.container {
+	@include box( $maxw: 170rem , $p: 0 2rem , $m: 0 auto );
+
+	@media (max-width: 550px) {
+		padding: 0 1rem;
+	}
+	@media (max-width: 450px) {
+		padding: 0;
+	}
+}

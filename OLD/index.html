@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		
+		<meta charset="utf-8">
+      	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+      	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<title>Clockworks</title>
+
+		<link rel="icon" href="images/favicon.ico?v=2">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	</head>
+
+	<body  class="background">
+
+		<div class="container">
+
+			<header class="header">
+				<h1 class="header__title">Clockworks</h1>
+			</header>
+
+			<main class="main">
+				<div class="clockwork">
+					<section class="clockwork__controls">
+						<div class="clockwork__controls-input-groups">
+							<div class="clockwork__controls-input-group">
+								<label for="minutes-input">Minutes</label>
+				                <input type="number" class="minutes-input" placeholder="0" max="300" min="0" />
+							</div>
+							<div class="clockwork__controls-input-group">
+								<label for="seconds-input">Seconds</label>
+				                <input type="number" class="seconds-input" placeholder="0" max="59" min="0" step="5" />
+							</div>
+						</div>
+						<div class="clockwork__controls-buttons">
+							<button class="clockwork__controls-button clockwork__controls-button--start" onclick="startTimer();">Start</button>
+				            <button class="clockwork__controls-button clockwork__controls-button--stop" onclick="stopTimer();" disabled>Stop</button>
+				            <button class="clockwork__controls-button clockwork__controls-button--pause" onclick="pauseTimer();" disabled>Pause</button>
+							<button class="clockwork__controls-button clockwork__controls-button--reset" onclick="resetTimer();">Reset</button>
+						</div>
+					</section>
+					<section class="clockwork__timer">
+						<h2><span class="minutes">0</span>:<span class="seconds">00</span></h2>
+					</section>
+				</div>
+			</main>
+			
+		</div>
+
+		<button class="theme-toogler-button" onclick="changeTheme()">
+			<img class="svg-icon" src="svg/icon-light.svg">
+		</button>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="script/script.js"></script>
+		
+	</body>
+
+</html>

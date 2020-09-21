@@ -1,0 +1,138 @@
+
+.clockwork {
+	display: flex;
+
+	@media (max-width: 900px) {
+		flex-direction: column-reverse;
+	}
+
+	&__controls {
+		@include flex( $fd: column );
+		@include box( $w: 50% , $pr: 10rem , $br: 1px solid $border );
+
+		@media (max-width: 900px) {
+			@include box( $w: 100% , $pr: 0rem , $bt: 1px solid $border , $br: 0px solid rgba(0, 0, 0, 0.25) , $mt: 4rem );
+		}
+		@media (max-width: 550px) {
+			margin-top: 2rem;
+		}
+		@media (max-width: 450px) {
+			@include box( $bt: 0px solid $border , $mt: 0 );
+		}
+
+		&-input-group {
+			@include flex( $ai: center );
+			@include box( $m: 2rem 0 );
+
+			@media (max-width: 450px) {
+				padding: 0 1.5rem;
+			}
+
+			label {
+				@include typo( $c: $black , $ff: $montserrat , $fw: 200 , $fs: 4rem );
+				@include box( $w: 20rem , $p: 1rem );
+
+			    @media (max-width: 550px) {
+			    	@include typo( $fw: 200 , $fs: 3rem );
+			    	@include box( $w: 16rem );
+			    }
+			    @media (max-width: 450px) {
+			    	@include box( $w: 15rem , $pl: 0 );
+			    }
+			}
+
+			input {
+				@include typo( $c: $black , $ff: $montserrat , $fw: 200 , $fs: 3rem );
+				@include box( $h: 5rem , $pl: 1rem , $b: none , $bb: 1px solid $border );
+				@include flex-item( $grow: 1 );
+				background-color: $white;
+			    outline: none;
+
+			    @media (max-width: 550px) {
+			    	@include box( $h: 4rem , $w: null );
+				}
+
+				&::placeholder {
+					color: $placeholder;
+				}
+
+				&:disabled {
+					border-bottom: 0px solid $border;
+					background-color: $button-dbg;
+					color: $button-dcolor;
+				}
+			}
+		}
+
+		&-buttons {
+			@include flex( $jc: space-between );
+			margin: 3rem 0;
+
+			@media (max-width: 400px) {
+				flex-wrap: wrap;
+				:nth-child(1) { order: 1;}
+				:nth-child(2) { order: 3;}
+				:nth-child(3) { order: 4;}
+				:nth-child(4) { order: 2;}
+			}
+			@media (max-width: 450px) {
+				@include box( $p: 0 1rem , $m: 2rem 0 );
+			}
+		}
+		
+		&-button {
+			@include typo( $c: $white , $ff: $montserrat , $fw: 400 , $fs: 1.6rem );
+			@include box( $h: 4.5rem , $w: 24.7% , $b: none );
+			background-color: $button-bg;
+			outline: none;
+			cursor: pointer;
+
+			@media (max-width: 450px) {
+				@include box( $w: 24.5% );
+			}
+			@media (max-width: 400px) {
+				@include box( $w: 49.5% , $mb: .5rem );
+			}
+			@media (hover: hover) {
+				&:enabled:hover {
+					color: $black;
+				    background-color: $white;
+				    border: 1px solid $button-bg;
+				}
+			}
+
+			&:enabled:active {
+				color: $black;
+			    background-color: $white;
+			    border: 1px solid $button-bg;
+			}
+			&:disabled {
+				color: $button-dcolor;
+				background-color: $button-dbg;
+			}
+		}
+	}
+
+	&__timer {
+
+		@media (max-width: 900px) {
+			text-align: center;
+		}
+
+		h2 {
+			@include typo( $c: $black , $ff: $montserrat , $fw: 200 , $fs: 15rem );
+			margin-left: 10rem;
+
+			@media (max-width: 1150px) {
+				@include box( $pl: 2rem , $m: 0 auto );
+			}
+			@media (max-width: 550px) {
+				font-size: 12rem;
+			}
+			@media (max-width: 450px) {
+				font-size: 10rem;
+				@include box( $p: 0 , $bt: 1px solid $border , $bb: 1px solid $border , $m: 0 auto );
+			}
+		}
+	}
+}
