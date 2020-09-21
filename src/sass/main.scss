@@ -1,5 +1,10 @@
 // BASE
 @use "base/base";
 @use "base/reset";
+// COMPONENTS
+@use "components/themebutton";
 // LAYOUT
 @use "layout/container";
+@use "layout/header";
+// PAGES
+@use "pages/home";

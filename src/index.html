@@ -5,10 +5,10 @@
 	<head>
 		
 		<meta charset="utf-8">
-      	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
       	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-		<title></title>
+		<title>Timeout</title>
 		
 		<link rel="icon" href="./assets/favicon/favicon.ico?v=2">
 	
@@ -16,7 +16,38 @@
 
 	<body>
 		
-		
+		<div class="container">
+			<header class="header">
+				<h1 class="header__title">Timeout</h1>
+			</header>
+			<main class="container">
+				<section class="controls">
+					<div class="controls__input-groups">
+						<div class="controls__input-group">
+							<label for="minutes-input">Minutes</label>
+			                <input type="number" class="minutes-input" placeholder="0" max="300" min="0" />
+						</div>
+						<div class="controls__input-group">
+							<label for="seconds-input">Seconds</label>
+			                <input type="number" class="seconds-input" placeholder="0" max="59" min="0" step="5" />
+						</div>
+					</div>
+					<div class="controls__btns">
+						<button class="controls__btn controls__btn--start" onclick="startTimer();">Start</button>
+			            <button class="controls__btn controls__btn--stop" onclick="stopTimer();" disabled>Stop</button>
+			            <button class="controls__btn controls__btn--pause" onclick="pauseTimer();" disabled>Pause</button>
+						<button class="controls__btn controls__btn--reset" onclick="resetTimer();">Reset</button>
+					</div>
+				</section>
+				<section class="timer">
+					<h2><span class="minutes">0</span>:<span class="seconds">00</span></h2>
+				</section>
+			</main>
+		</div>
+
+		<button class="theme-btn" onclick="changeTheme()">
+			<img class="svg-icon" src="svg/icon-light.svg">
+		</button>
 
 	</body>
 

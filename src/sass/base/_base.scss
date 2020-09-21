@@ -1,6 +1,17 @@
 @use '../abstracts' as *;
 
+:root {
+  --black: #fff;
+  --white: #000;
+  --border: rgba(255, 255, 255, 0.25);
+  --placeholder: rgba(255, 255, 255, 0.2);
+  --button-bg: #CBCBCB;
+  --button-dbg: #ffffff30;
+  --button-dcolor: ##ffffff69;
+}
+
 body {
 	-webkit-tap-highlight-color: transparent;
     tap-highlight-color: transparent;
+    font-family: $montserrat;
 }

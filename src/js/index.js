@@ -1,4 +1,4 @@
 // ASSETS
-import './assets.js';
+import './assets/assets.js';
 
 // MAIN
