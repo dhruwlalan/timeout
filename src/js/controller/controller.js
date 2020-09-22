@@ -1,7 +1,7 @@
-import dom from './views/dom.js';
-import changeTheme from './views/changeTheme.js';
-import * as timeoutView from './views/timeoutView.js';
-import Timeout from './models/Timeout.js';
+import dom from '../views/dom.js';
+import changeTheme from '../views/changeTheme.js';
+import * as timeoutView from '../views/timeoutView.js';
+import Timeout from '../models/Timeout.js';
 
 let minutes = 0;
 let seconds = 0;

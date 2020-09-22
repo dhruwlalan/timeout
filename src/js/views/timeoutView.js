@@ -9,24 +9,18 @@ export const getSecondsInput = function () {
 export const setMinutesInput = function (val) {
     if (val === 0) {
         dom.minutesInput.value = '';
-        dom.startBtn.setAttribute('disabled' , 'true');
-        dom.resetBtn.setAttribute('disabled' , 'true');
     } else {
-        dom.startBtn.removeAttribute('disabled');
-        dom.resetBtn.removeAttribute('disabled');
         dom.minutesInput.value = val;
     }
+    resetButtons();
 }
 export const setSecondsInput = function (val) {
     if (val === 0) {
         dom.secondsInput.value = '';
-        dom.startBtn.setAttribute('disabled' , 'true');
-        dom.resetBtn.setAttribute('disabled' , 'true');
     } else {
-        dom.startBtn.removeAttribute('disabled');
-        dom.resetBtn.removeAttribute('disabled');
         dom.secondsInput.value = val;
     }
+    resetButtons();
 }
 
 export const start = function () {
@@ -52,6 +46,15 @@ export const reset = function () {
     setSecondsInput(0);
     dom.minutesOutput.textContent = '0';
     dom.secondsOutput.textContent = '00';
+}
+const resetButtons = () => {
+    if (getMinutesInput() === 0 && getSecondsInput() === 0) {
+        dom.startBtn.setAttribute('disabled' , 'true');
+        dom.resetBtn.setAttribute('disabled' , 'true');
+    } else {
+        dom.startBtn.removeAttribute('disabled');
+        dom.resetBtn.removeAttribute('disabled');
+    }
 }
 
 export const updateTimer = function (key , value) {
