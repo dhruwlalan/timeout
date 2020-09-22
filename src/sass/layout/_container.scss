@@ -1,13 +1,7 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .container {
-	@include size( $maxw: 170rem , );
-	@include pbm( $p: 0 2rem , $m: 0 auto );
-
-	@media (max-width: 550px) {
-		padding: 0 1rem;
-	}
-	@media (max-width: 450px) {
-		padding: 0;
-	}
+	@include size( $h: 100vh , $w: 100vw , );
+	@include bg( $c: $primary , );
+	@include pbm( $p: 2rem , );
 }

@@ -24,12 +24,12 @@
 				<section class="controls">
 					<div class="controls__input-groups">
 						<div class="controls__input-group">
-							<label for="minutes-input">Minutes</label>
-			                <input type="number" class="minutes-input" placeholder="0" max="300" min="0" />
+							<label for="minutes-input" class="controls__input-group--label">Minutes</label>
+			                <input type="number" class="minutes-input controls__input-group--input" placeholder="0"/>
 						</div>
 						<div class="controls__input-group">
-							<label for="seconds-input">Seconds</label>
-			                <input type="number" class="seconds-input" placeholder="0" max="60" min="0" step="5" />
+							<label for="seconds-input" class="controls__input-group--label">Seconds</label>
+			                <input type="number" class="seconds-input controls__input-group--input" placeholder="0"/>
 						</div>
 					</div>
 					<div class="controls__btns">
@@ -39,8 +39,11 @@
 						<button class="controls__btn controls__btn--reset" disabled>Reset</button>
 					</div>
 				</section>
+				<span class="seperator"></span>
 				<section class="timer">
-					<h2><span class="timer__minutes">0</span>:<span class="timer__seconds">00</span></h2>
+					<span class="timer__minutes">0</span>
+					<span class="timer__colon">:</span>
+					<span class="timer__seconds">00</span>
 				</section>
 			</main>
 		</div>

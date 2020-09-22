@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+.controls {
+	@include size( $w: 70rem , );
+	@include flex( $fd: column , );
+	@include pbm( $p: 2rem , $pr: 6rem , );
+
+	&__input-groups {
+		@include pbm( $rad: 1rem , $p: 2rem , $mb: 3rem , );
+		box-shadow: -5px -5px 10px $shadow-light, 5px 5px 10px $shadow-dark;
+	}
+
+	&__input-group {
+		@include flex( $jc: null , $ai: streatch , );
+		@include pbm( $rad: .5rem , );
+		box-shadow: -4px -4px 4px $shadow-light, 4px 4px 4px $shadow-dark;
+
+		&:not(:last-child) { margin-bottom: 2.5rem; }
+
+		&--label {
+			@include typo( $c: $text , $ff: $montserrat , $fw: 400 , $fs: 4rem , $ta: center , );
+			@include size( $w: 20rem , );
+			@include pbm( $p: 1rem , $rad: .5rem 0 0 .5rem , );
+		}
+
+		&--input {
+			@include typo( $c: $text , $ff: $montserrat , $fw: 300 , $fs: 3rem );
+			@include pbm( $pl: 2rem , $b: 3px solid $primary , $rad: 6px );
+			@include flex-item( $grow: 1 );
+			@include bg( $c: $primary , );
+			box-shadow: inset -4px -4px 4px $shadow-light, inset 4px 4px 4px $shadow-dark;
+		    outline: none;
+
+			&::placeholder { color: $placeholder; }
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button { margin-right: 1rem; }
+
+			&:disabled {
+				@include bg( $c: $disabled , );
+				box-shadow: inset -3px -3px 3px $shadow-light, inset 3px 3px 3px $shadow-dark;
+			}
+		}
+	}
+
+	&__btns {
+		@include flex( $jc: space-between );
+
+		// @media (max-width: 400px) {
+		// 	flex-wrap: wrap;
+		// 	:nth-child(1) { order: 1;}
+		// 	:nth-child(2) { order: 3;}
+		// 	:nth-child(3) { order: 4;}
+		// 	:nth-child(4) { order: 2;}
+		// }
+		// @media (max-width: 450px) {
+		// 	@include pbm( $p: 0 1rem , $m: 2rem 0 );
+		// }
+	}
+}

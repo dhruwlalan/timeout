@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+.timer {
+	@include typo( $c: $text , $ff: $montserrat , $fw: 100 , );
+	@include flex( $ai: center , );
+	@include pbm( $ml: 5rem , );
+
+	&__minutes , &__seconds {
+		@include typo( $fs: 20rem , );
+		text-shadow: -3px -3px 3px $shadow-light, 3px 3px 3px $shadow-dark;
+	}
+
+	&__colon {
+		@include typo( $fs: 15rem , );
+		transform: translateY(-6px);
+		text-shadow: -3px -3px 3px $shadow-light, 3px 3px 3px $shadow-dark;
+	}
+}

@@ -1,16 +1,5 @@
 @use '../abstracts' as *;
 
-:root {
-  --black: #000;
-  --white: #fff;
-  --border: rgba(255, 255, 255, 0.25);
-  --placeholder: rgba(255, 255, 255, 0.2);
-  --button-bg: #CBCBCB;
-  --button-dbg: #ffffff30;
-  --button-dcolor: ##ffffff69;
-}
-
 body {
-	  -webkit-tap-highlight-color: transparent;
-    tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
 }

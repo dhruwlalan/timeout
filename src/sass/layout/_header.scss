@@ -1,26 +1,11 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .header {
-	margin: 8rem 0;
+	@include pbm( $p: 0rem 2.3rem , $mb: 2rem , );
 
 	&__title {
-		@include typo( $c: $black , $fw: 500 , $fs: 10rem );
-		@include typo( $ff: $solway , );
-
-		@media (max-width: 550px) {
-			font-size: 15vw;
-		}
+		@include typo( $c: $text , $ff: $solway , $fw: 700 , $fs: 10rem );
+		text-shadow: -5px -5px 5px $shadow-light, 5px 5px 5px $shadow-dark;
 	}
 
-	@media (max-width: 900px) {
-		@include pbm($m: 4rem 0 , $mb: 2rem );
-		text-align: center;
-	}
-	@media (max-width: 550px) {
-		@include size( $w: 100% , );
-		@include pbm( $mb: 0 );
-	}
-	@media (max-width: 450px) {
-		@include pbm( $m: 3rem 0 );
-	}
 }
