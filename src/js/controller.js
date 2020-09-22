@@ -3,12 +3,16 @@ import changeTheme from './views/changeTheme.js';
 import * as timeoutView from './views/timeoutView.js';
 import Timeout from './models/Timeout.js';
 
+let minutes = 0;
+let seconds = 0;
+
 const updateMinutes = () => {
 	let min = timeoutView.getMinutesInput();
 	min = min > 300 ? 300 : Math.floor(min);
 	min = min < 0 ? 0 : Math.floor(min);
 	timeoutView.setMinutesInput(min);
 	Timeout.minutes = min;
+	minutes = min;
 	timeoutView.updateTimer('minutes' , min);
 }
 const updateSeconds = () => {
@@ -17,21 +21,43 @@ const updateSeconds = () => {
 	sec = sec < 0 ? 0 : Math.floor(sec);
 	timeoutView.setSecondsInput(sec);
 	Timeout.seconds = sec;
+	seconds = sec;
 	timeoutView.updateTimer('seconds' , sec);
 }
 const startTimer = () => {
-	
+	timeoutView.start();
+	Timeout.timerId = setInterval(() => {
+		seconds--;
+		if (seconds < 0) {
+			if (minutes === 0) {
+				return stopTimer();
+			}
+			seconds = 59;
+			minutes--;
+		}
+		timeoutView.updateTimer('minutes' , minutes);
+		timeoutView.updateTimer('seconds' , seconds);
+	} , 1000);
 }
 const stopTimer = () => {
-	
+	timeoutView.stop();
+	clearInterval(Timeout.timerId);
+	console.log(Timeout);
+	minutes = Timeout.minutes;
+	seconds = Timeout.seconds;
+    timeoutView.updateTimer('minutes' , Timeout.minutes);
+    timeoutView.updateTimer('seconds' , Timeout.seconds);
 }
 const pauseTimer = () => {
-	
+	timeoutView.pause();
+	clearInterval(Timeout.timerId);
 }
 const resetTimer = () => {
 	Timeout.minutes = 0;
 	Timeout.seconds = 0;
 	Timeout.timerId = 0;
+	minutes = 0;
+	seconds = 0;
 	timeoutView.reset();
 }
 
@@ -47,32 +73,6 @@ const setupEventListeners = function () {
 	dom.resetBtn.addEventListener('click' , resetTimer);
 }
 export default function () {
-	setupEventListeners();
+	timeoutView.init();
+	setupEventListeners();	
 }
-
-
-// startTimer = function (seconds , minutes) {
-// 	    timerId = setInterval(function() {
-// 	        seconds--;
-// 	        if (seconds < 0) {
-// 	            if (minutes == 0) {
-// 	                return stopTimer();
-// 	            }
-// 	            seconds = 59;
-// 	            minutes--;
-// 	        }
-// 	        updateValue("minutes", this.minutes);
-// 	        updateValue("seconds", this.seconds);
-// 	    }, 1000);
-// }
-// stopTimer = function () {
-//     clearInterval(timerId);
-//     if (seconds == 0) {
-//         seconds = "0" + seconds;
-//     }
-//     updateValue("minutes", minutes);
-//     updateValue("seconds", seconds);
-// }
-// pauseTimer = function () {
-//     clearInterval(timerId);
-// }
