@@ -1,5 +1,5 @@
 import dom from '../views/dom.js';
-import changeTheme from '../views/changeTheme.js';
+import * as theme from '../views/theme.js';
 import * as timeoutView from '../views/timeoutView.js';
 import Timeout from '../models/Timeout.js';
 
@@ -62,7 +62,7 @@ const resetTimer = () => {
 }
 
 const setupEventListeners = function () {
-	dom.themeBtn.addEventListener('click' , changeTheme);
+	dom.themeBtn.addEventListener('click' , theme.changeTheme);
 	dom.minutesInput.addEventListener('keyup' , updateMinutes);
 	dom.minutesInput.addEventListener('change' , updateMinutes);
 	dom.secondsInput.addEventListener('keyup' , updateSeconds);
@@ -74,5 +74,7 @@ const setupEventListeners = function () {
 }
 export default function () {
 	timeoutView.init();
-	setupEventListeners();	
+	const currentTheme = localStorage.getItem('timeoutTheme');
+	theme.updateTheme(currentTheme);
+	setupEventListeners();
 }
