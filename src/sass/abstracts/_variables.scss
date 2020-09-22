@@ -10,4 +10,77 @@ $button-dcolor: var(--button-dcolor);
 $primary: var(--primary);
 
 // fonts
+@font-face {
+	font-family: Montserrat;
+	src: url("./assets/fonts/montserrat-100.woff2");
+	font-weight: 100;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url("./assets/fonts/montserrat-100.woff2");
+	font-weight: 200;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url("./assets/fonts/montserrat-100.woff2");
+	font-weight: 300;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url("./assets/fonts/montserrat-100.woff2");
+	font-weight: 400;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url("./assets/fonts/montserrat-100.woff2");
+	font-weight: 500;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url("./assets/fonts/montserrat-100.woff2");
+	font-weight: 600;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url("./assets/fonts/montserrat-100.woff2");
+	font-weight: 700;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url("./assets/fonts/montserrat-100.woff2");
+	font-weight: 800;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url("./assets/fonts/montserrat-100.woff2");
+	font-weight: 900;
+}
 $montserrat: 'Montserrat', sans-serif;
+
+
+@font-face {
+	font-family: Solway;
+	src: url("./assets/fonts/solway-300.ttf");
+	font-weight: 300;
+}
+@font-face {
+	font-family: Solway;
+	src: url("./assets/fonts/solway-400.ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: Solway;
+	src: url("./assets/fonts/solway-500.ttf");
+	font-weight: 500;
+}
+@font-face {
+	font-family: Solway;
+	src: url("./assets/fonts/solway-700.ttf");
+	font-weight: 700;
+}
+@font-face {
+	font-family: Solway;
+	src: url("./assets/fonts/solway-800.ttf");
+	font-weight: 800;
+}
+$solway: 'Solway', serif;

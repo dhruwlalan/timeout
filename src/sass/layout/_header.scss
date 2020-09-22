@@ -1,9 +1,11 @@
+@use '../abstracts' as *;
 
 .header {
 	margin: 8rem 0;
 
 	&__title {
-		@include typo( $c: $black , $ff: $montserrat , $fw: 800 , $fs: 8rem );
+		@include typo( $c: $black , $fw: 500 , $fs: 10rem );
+		@include typo( $ff: $solway , );
 
 		@media (max-width: 550px) {
 			font-size: 15vw;
@@ -11,13 +13,14 @@
 	}
 
 	@media (max-width: 900px) {
-		@include box($m: 4rem 0 , $mb: 2rem );
+		@include pbm($m: 4rem 0 , $mb: 2rem );
 		text-align: center;
 	}
 	@media (max-width: 550px) {
-		@include box( $w: 100% , $mb: 0 );
+		@include size( $w: 100% , );
+		@include pbm( $mb: 0 );
 	}
 	@media (max-width: 450px) {
-		@include box( $m: 3rem 0 );
+		@include pbm( $m: 3rem 0 );
 	}
 }
