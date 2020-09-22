@@ -75,6 +75,11 @@ const setupEventListeners = function () {
 export default function () {
 	timeoutView.init();
 	const currentTheme = localStorage.getItem('timeoutTheme');
-	theme.updateTheme(currentTheme);
+	if (currentTheme) {
+		theme.updateTheme(currentTheme);	
+	} else {
+		localStorage.setItem('timeoutTheme' , 'light');
+		theme.updateTheme('light');
+	}
 	setupEventListeners();
 }
