@@ -16,16 +16,16 @@
 	}
 
 @mixin bg(
+	$c: 	null, // background-color
 	$i: 	null, // background-image: url()
 	$lg: 	null, // background-image: linear-gradient()
-	$rg: 	null, // background-image: linear-gradient()
-	$p: 	null, // background-position
+	$rg: 	null, // background-image: radial-gradient()
 	$s: 	null, // background-size
+	$p: 	null, // background-position
 	$r: 	null, // background-repeat
 	$o: 	null, // background-origin
 	$clip:	null, // background-clip
 	$a: 	null, // background-attachment
-	$c: 	null, // background-color
 ){
 	@if $i != null { background: url(#{$i}) $p $s $r $o $clip $a $c; }
 	@else if $lg != null { background: linear-gradient(#{$lg}) $p $s $r $o $clip $a $c; }
@@ -142,6 +142,21 @@
 		$t: 50%; $l: 50%;
 		transform: translate(-50% , -50%);
 		}
+	top: $t;
+	bottom: $b;
+	left: $l;
+	right: $r;
+	z-index: $z;
+	}
+
+@mixin pos-fixed(
+	$t: null, // top:
+	$b: null, // bottom:
+	$l: null, // left:
+	$r: null, // right:
+	$z: null, // z-index:
+) {
+	position: fixed;
 	top: $t;
 	bottom: $b;
 	left: $l;

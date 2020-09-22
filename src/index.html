@@ -29,24 +29,24 @@
 						</div>
 						<div class="controls__input-group">
 							<label for="seconds-input">Seconds</label>
-			                <input type="number" class="seconds-input" placeholder="0" max="59" min="0" step="5" />
+			                <input type="number" class="seconds-input" placeholder="0" max="60" min="0" step="5" />
 						</div>
 					</div>
 					<div class="controls__btns">
-						<button class="controls__btn controls__btn--start" onclick="startTimer();">Start</button>
-			            <button class="controls__btn controls__btn--stop" onclick="stopTimer();" disabled>Stop</button>
-			            <button class="controls__btn controls__btn--pause" onclick="pauseTimer();" disabled>Pause</button>
-						<button class="controls__btn controls__btn--reset" onclick="resetTimer();">Reset</button>
+						<button class="controls__btn controls__btn--start">Start</button>
+			            <button class="controls__btn controls__btn--stop" disabled>Stop</button>
+			            <button class="controls__btn controls__btn--pause" disabled>Pause</button>
+						<button class="controls__btn controls__btn--reset">Reset</button>
 					</div>
 				</section>
 				<section class="timer">
-					<h2><span class="minutes">0</span>:<span class="seconds">00</span></h2>
+					<h2><span class="timer__minutes">0</span>:<span class="timer__seconds">00</span></h2>
 				</section>
 			</main>
 		</div>
 
-		<button class="theme-btn" onclick="changeTheme()">
-			<img class="svg-icon" src="svg/icon-light.svg">
+		<button class="theme-btn">
+			<img class="theme-svg" src="./assets/svg/icon-light.svg">
 		</button>
 
 	</body>
