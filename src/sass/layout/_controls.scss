@@ -18,7 +18,7 @@
 		&:not(:last-child) { margin-bottom: 2.5rem; }
 
 		&--label {
-			@include typo( $c: $text , $ff: $montserrat , $fw: 400 , $fs: 4rem , $ta: center , );
+			@include typo( $c: $text , $ff: $montserrat , $fw: 300 , $fs: 4rem , $ta: center , );
 			@include size( $w: 20rem , );
 			@include pbm( $p: 1rem , $rad: .5rem 0 0 .5rem , );
 		}
@@ -33,7 +33,7 @@
 
 			&::placeholder { color: $placeholder; }
 			&::-webkit-outer-spin-button,
-			&::-webkit-inner-spin-button { margin-right: 1rem; }
+			&::-webkit-inner-spin-button { -webkit-appearance:none; margin: 0; }
 
 			&:disabled {
 				@include bg( $c: $disabled , );

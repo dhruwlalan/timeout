@@ -1,9 +1,9 @@
 
 .theme-dark {
-	--primary: #000;
-	--border: rgba(255, 255, 255, 0.25);
-	--placeholder: rgba(255, 255, 255, 0.2);
-	--button-bg: #CBCBCB;
-	--button-dbg: #ffffff30;
-	--button-dcolor: #ffffff69;
+	--primary: #243441;
+	--text: rgb(190 222 227);
+	--shadow-light: rgb(44 64 80 / 70%);
+	--shadow-dark: rgb(0 0 0 / 20%);
+	--placeholder: rgb(171 197 201 / 30%);
+	--disabled: rgb(0 0 0 / 20%);
 }

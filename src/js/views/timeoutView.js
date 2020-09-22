@@ -28,12 +28,16 @@ export const start = function () {
     dom.stopBtn.removeAttribute('disabled');
     dom.pauseBtn.removeAttribute('disabled');
     dom.resetBtn.setAttribute('disabled' , 'true');
+    dom.minutesInput.setAttribute('disabled' , 'true');
+    dom.secondsInput.setAttribute('disabled' , 'true');
 }
 export const stop = function () {
     dom.startBtn.removeAttribute('disabled');
     dom.stopBtn.setAttribute('disabled' , 'true');
     dom.pauseBtn.setAttribute('disabled' , 'true');
     dom.resetBtn.removeAttribute('disabled');
+    dom.minutesInput.removeAttribute('disabled');
+    dom.secondsInput.removeAttribute('disabled');
 }
 export const pause = function () {
     dom.startBtn.removeAttribute('disabled');
