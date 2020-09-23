@@ -5,6 +5,17 @@
 	@include flex( $fd: column , );
 	@include pbm( $p: 2rem , $pr: 6rem , );
 
+	@media (max-width: 1140px) {
+		@include size( $w: 60rem , );
+	}
+	@media (max-width: 930px) {
+		@include pbm( $p: 2rem , );
+	}
+	@media (max-width: 780px) {
+		@include size( $w: 100% , );
+		@include pbm( $pt: 0 , );
+	}
+
 	&__input-groups {
 		@include pbm( $rad: 1rem , $p: 2rem , $mb: 3rem , );
 		box-shadow: -5px -5px 10px $shadow-light, 5px 5px 10px $shadow-dark;
@@ -14,20 +25,34 @@
 		@include flex( $jc: null , $ai: streatch , );
 		@include pbm( $rad: .5rem , );
 		box-shadow: -4px -4px 4px $shadow-light, 4px 4px 4px $shadow-dark;
-
 		&:not(:last-child) { margin-bottom: 2.5rem; }
+
+		@media (max-width: 540px) {
+			@include size( $h: 6rem , );
+		}
+		@media (max-width: 420px) {
+			@include size( $h: 5.5rem , );
+		}
 
 		&--label {
 			@include typo( $c: $text , $ff: $montserrat , $fw: 300 , $fs: 4rem , $ta: center , );
-			@include size( $w: 20rem , );
+			@include size( $w: 40% , );
 			@include pbm( $p: 1rem , $rad: .5rem 0 0 .5rem , );
+
+			@media (max-width: 540px) {
+				@include typo( $fs: 3rem , );	
+			}
+			@media (max-width: 420px) {
+				@include flex( $jc: center , $ai: center , );
+				@include typo( $fs: 2.5rem , );	
+			}
 		}
 
 		&--input {
 			@include typo( $c: $text , $ff: $montserrat , $fw: 300 , $fs: 3rem );
 			@include pbm( $pl: 2rem , $b: 3px solid $primary , $rad: 6px );
-			@include flex-item( $grow: 1 );
 			@include bg( $c: $primary , );
+			@include size( $w: 100% , );
 			box-shadow: inset -4px -4px 4px $shadow-light, inset 4px 4px 4px $shadow-dark;
 		    outline: none;
 
@@ -44,16 +69,5 @@
 
 	&__btns {
 		@include flex( $jc: space-between );
-
-		// @media (max-width: 400px) {
-		// 	flex-wrap: wrap;
-		// 	:nth-child(1) { order: 1;}
-		// 	:nth-child(2) { order: 3;}
-		// 	:nth-child(3) { order: 4;}
-		// 	:nth-child(4) { order: 2;}
-		// }
-		// @media (max-width: 450px) {
-		// 	@include pbm( $p: 0 1rem , $m: 2rem 0 );
-		// }
 	}
 }

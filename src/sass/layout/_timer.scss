@@ -3,16 +3,47 @@
 .timer {
 	@include typo( $c: $text , $ff: $montserrat , $fw: 100 , );
 	@include flex( $ai: center , );
-	@include pbm( $ml: 5rem , );
+	@include pbm( $ml: 5rem , $pr: 1rem , );
+
+	@media (max-width: 930px) {
+		@include pbm( $ml: 1rem , );
+	}
+	@media (max-width: 780px) {
+		@include pbm( $mt: 14.2rem , );
+		justify-content: center;
+	}
+	@media (max-width: 480px) {
+		@include pbm( $mt: 30vw , );
+	}
 
 	&__minutes , &__seconds {
 		@include typo( $fs: 20rem , );
 		text-shadow: -3px -3px 3px $shadow-light, 3px 3px 3px $shadow-dark;
+
+		@media (max-width: 1320px) {
+			@include typo( $fs: 15rem , );
+		}
+		@media (max-width: 930px) {
+			@include typo( $fs: 12rem , );
+		}
+		@media (max-width: 480px) {
+			@include typo( $fs: 10rem , );
+		}
 	}
 
 	&__colon {
 		@include typo( $fs: 15rem , );
 		transform: translateY(-6px);
 		text-shadow: -3px -3px 3px $shadow-light, 3px 3px 3px $shadow-dark;
+
+		@media (max-width: 1320px) {
+			@include typo( $fs: 10rem , );
+		}
+		@media (max-width: 930px) {
+			@include typo( $fs: 7rem , );
+		}
+		@media (max-width: 480px) {
+			@include typo( $fs: 5rem , );
+		}
 	}
 }

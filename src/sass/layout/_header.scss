@@ -7,5 +7,17 @@
 		@include typo( $c: $text , $ff: $solway , $fw: 400 , $fs: 10rem );
 		@include pbm( $pl: 2rem , $rad: 1rem , );
 		box-shadow: -5px -5px 10px $shadow-light, 5px 5px 10px $shadow-dark;
+
+		@media (max-width: 780px) {
+			@include pbm( $p: 0 , );
+		}
+		@media (max-width: 480px) {
+			@include typo( $fs: calc(20vw) , );
+		}
+	}
+	@media (max-width: 780px) {
+		@include pos-fixed( $t: 2rem , $l: 2rem , );
+		@include size( $w: calc(100% - 4rem) , );
+		text-align: center;
 	}
 }

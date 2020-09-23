@@ -4,4 +4,17 @@
 	@include size( $h: 100vh , $w: 100vw , );
 	@include bg( $c: $primary , );
 	@include pbm( $p: 6rem , );
+
+	@media (max-width: 1320px) {
+		@include pbm( $p: 2rem , );
+	}
+	@media (max-width: 930px) {
+		@include pbm( $p: 0rem , $pt: 2rem , );
+	}
+	@media (max-width: 780px) {
+    	@include pbm( $p: 0rem , );
+    }
+    @media (max-width: 540px) {
+		@include size( $h: auto , $w: auto , );
+	}
 }
