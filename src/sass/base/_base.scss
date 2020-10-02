@@ -3,5 +3,6 @@
 body {
 	-webkit-tap-highlight-color: transparent;
 	background-color: $primary;
+	overflow: hidden;
 	@include disable-selection;
 }

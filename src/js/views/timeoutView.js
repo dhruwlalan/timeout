@@ -50,6 +50,12 @@ export const reset = function () {
     setSecondsInput(0);
     dom.minutesOutput.textContent = '0';
     dom.secondsOutput.textContent = '00';
+    dom.minutesInput.removeAttribute('disabled');
+    dom.secondsInput.removeAttribute('disabled');
+    dom.startBtn.setAttribute('disabled' , 'true');
+    dom.stopBtn.setAttribute('disabled' , 'true');
+    dom.pauseBtn.setAttribute('disabled' , 'true');
+    dom.resetBtn.setAttribute('disabled' , 'true');
 }
 
 const resetButtons = () => {

@@ -1,6 +1,7 @@
 
 export default {
     body:           document.body ,
+    header:         document.querySelector('.header') ,
     minutesInput:   document.querySelector('.minutes-input') ,
     secondsInput:   document.querySelector('.seconds-input') ,
     minutesOutput:  document.querySelector('.timer__minutes') ,

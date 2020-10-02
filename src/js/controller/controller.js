@@ -24,13 +24,15 @@ const updateSeconds = () => {
     seconds = sec;
     timeoutView.updateTimer('seconds' , sec);
 }
+
 const startTimer = () => {
     timeoutView.start();
     Timeout.timerId = setInterval(() => {
         seconds--;
         if (seconds < 0) {
             if (minutes === 0) {
-                return stopTimer();
+                timeout();
+                return;
             }
             seconds = 59;
             minutes--;
@@ -42,7 +44,6 @@ const startTimer = () => {
 const stopTimer = () => {
     timeoutView.stop();
     clearInterval(Timeout.timerId);
-    console.log(Timeout);
     minutes = Timeout.minutes;
     seconds = Timeout.seconds;
     timeoutView.updateTimer('minutes' , Timeout.minutes);
@@ -59,6 +60,15 @@ const resetTimer = () => {
     minutes = 0;
     seconds = 0;
     timeoutView.reset();
+}
+
+const timeout = () => {
+    clearInterval(Timeout.timerId);
+    resetTimer();
+    dom.header.classList.add('heartBeat');
+    setTimeout(() => {
+        dom.header.classList.remove('heartBeat');
+    } , 3100 );
 }
 
 const setupEventListeners = function () {
