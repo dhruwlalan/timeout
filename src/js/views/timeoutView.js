@@ -51,6 +51,7 @@ export const reset = function () {
     dom.minutesOutput.textContent = '0';
     dom.secondsOutput.textContent = '00';
 }
+
 const resetButtons = () => {
     if (getMinutesInput() === 0 && getSecondsInput() === 0) {
         dom.startBtn.setAttribute('disabled' , 'true');
