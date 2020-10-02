@@ -1,8 +1,0 @@
-@use '../abstracts' as *;
-
-body {
-	@include bg( $c: $primary , );
-	@include disable-selection;
-	overflow: hidden;
-	-webkit-tap-highlight-color: transparent;
-}
