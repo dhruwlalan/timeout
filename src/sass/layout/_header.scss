@@ -16,8 +16,8 @@
 		}
 	}
 	@media (max-width: 780px) {
-		@include pos-fixed( $t: 2rem , $l: 2rem , );
 		@include size( $w: calc(100% - 4rem) , );
+		@include pos-fixed( $t: 2rem , $l: 2rem , );
 		text-align: center;
 	}
 }

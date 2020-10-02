@@ -2,8 +2,8 @@
 
 .timer {
 	@include typo( $c: $text , $ff: $montserrat , $fw: 100 , );
-	@include flex( $ai: center , );
 	@include pbm( $ml: 5rem , $pr: 1rem , );
+	@include flex( $ai: center , );
 
 	@media (max-width: 930px) {
 		@include pbm( $ml: 1rem , );
@@ -33,8 +33,8 @@
 
 	&__colon {
 		@include typo( $fs: 15rem , );
-		transform: translateY(-6px);
 		text-shadow: -3px -3px 3px $shadow-light, 3px 3px 3px $shadow-dark;
+		transform: translateY(-6px);
 
 		@media (max-width: 1320px) {
 			@include typo( $fs: 10rem , );
