@@ -2,8 +2,8 @@
 
 .controls {
 	@include size( $w: 70rem , );
-	@include flex( $fd: column , );
 	@include pbm( $p: 2rem , $pr: 6rem , );
+	@include flex( $fd: column , );
 
 	@media (max-width: 1140px) {
 		@include size( $w: 60rem , );
@@ -22,8 +22,8 @@
 	}
 
 	&__input-group {
-		@include flex( $jc: null , $ai: streatch , );
 		@include pbm( $rad: .5rem , );
+		@include flex( $jc: null , $ai: streatch , );
 		box-shadow: -4px -4px 4px $shadow-light, 4px 4px 4px $shadow-dark;
 		&:not(:last-child) { margin-bottom: 2.5rem; }
 
@@ -35,16 +35,16 @@
 		}
 
 		&--label {
-			@include typo( $c: $text , $ff: $montserrat , $fw: 300 , $fs: 4rem , $ta: center , );
 			@include size( $w: 40% , );
+			@include typo( $c: $text , $ff: $montserrat , $fw: 300 , $fs: 4rem , $ta: center , );
 			@include pbm( $p: 1rem , $rad: .5rem 0 0 .5rem , );
 
 			@media (max-width: 540px) {
 				@include typo( $fs: 3rem , );	
 			}
 			@media (max-width: 420px) {
-				@include flex( $jc: center , $ai: center , );
 				@include typo( $fs: 2.5rem , );	
+				@include flex( $jc: center , $ai: center , );
 			}
 		}
 
