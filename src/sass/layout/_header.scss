@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .header {
-	@include pbm( $mb: 2rem , );
+	@include pbm( $mb: 2.5rem , );
 
 	&__title {
 		@include typo( $c: $text , $ff: $solway , $fw: 400 , $fs: 10rem );

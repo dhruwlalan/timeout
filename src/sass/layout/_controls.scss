@@ -16,11 +16,6 @@
 		@include pbm( $pt: 0 , );
 	}
 
-	&__input-groups {
-		@include pbm( $rad: 1rem , $p: 2rem , $mb: 3rem , );
-		box-shadow: -5px -5px 10px $shadow-light, 5px 5px 10px $shadow-dark;
-	}
-
 	&__input-group {
 		@include pbm( $rad: .5rem , );
 		@include flex( $jc: null , $ai: streatch , );
@@ -35,11 +30,12 @@
 		}
 
 		&--label {
-			@include size( $w: 40% , );
+			@include size( $w: 30rem , );
 			@include typo( $c: $text , $ff: $montserrat , $fw: 300 , $fs: 4rem , $ta: center , );
 			@include pbm( $p: 1rem , $rad: .5rem 0 0 .5rem , );
 
 			@media (max-width: 540px) {
+				@include size( $w: 20rem , );
 				@include typo( $fs: 3rem , );	
 			}
 			@media (max-width: 420px) {
