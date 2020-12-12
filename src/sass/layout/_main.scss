@@ -1,9 +1,9 @@
 @use "../abstracts" as *;
 
 .main {
-	@include flex();
+   @include flex();
 
-	@media (max-width: 780px) {
-		@include flex( $fd: column-reverse , );
-	}
+   @media (max-width: 780px) {
+      @include flex($fd: column-reverse);
+   }
 }

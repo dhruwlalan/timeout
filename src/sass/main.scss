@@ -1,17 +1,16 @@
-
-// BASE
-	@use "base/base";
-	@use "base/reset";
-	@use "base/animations";
-// COMPONENTS
-	@use "components/theme-btn";
-	@use "components/controls-btn";
-	@use "components/seperator";
-// LAYOUT
-	@use "layout/container";
-	@use "layout/header";
-	@use "layout/main";
-	@use "layout/controls";
-	@use "layout/timer";
-// THEMES
-	@use "themes/neumorphic";
+///BASE///
+@use "base/base";
+@use "base/reset";
+@use "base/animations";
+///COMPONENTS///
+@use "components/theme-btn";
+@use "components/controls-btn";
+@use "components/separator";
+///LAYOUT///
+@use "layout/container";
+@use "layout/header";
+@use "layout/main";
+@use "layout/controls";
+@use "layout/timer";
+///THEMES///
+@use "themes/neumorphic";

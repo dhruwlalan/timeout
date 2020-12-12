@@ -1,10 +1,10 @@
 @use '../abstracts' as *;
 
 .theme-btn {
-	@include size( $h: 4rem , $w: 4rem );
-	@include bg( $c: none , );
-	@include pbm( $b: none , );
-	@include pos-fixed( $b: 1rem , $r: 1rem );
-    cursor: pointer;
-    outline: none;
+   @include size($h: 4rem, $w: 4rem);
+   @include bg($c: none);
+   @include pbm($b: none);
+   @include pos-fixed($b: 1rem, $r: 1rem);
+   cursor: pointer;
+   outline: none;
 }

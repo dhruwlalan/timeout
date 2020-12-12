@@ -1,7 +1,7 @@
-// ASSETS
-import './assets/assets.js';
+///ASSETS///
+import './assets/assets';
 
-// MAIN
-import init from './controller/controller.js';
+///MAIN///
+import init from './controller/controller';
 
 init();
